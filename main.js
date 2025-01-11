@@ -1,12 +1,27 @@
 const library = [];
-let index = 0;
 
 const cont = document.querySelector(".container");
+const dialogEl = document.querySelector("dialog");
 
-const button = document.querySelector("button");
-button.addEventListener('click', (e) => {
-    addToBookLibrary("blah", "author", 142, true);
-})
+document.querySelector("#add-element").addEventListener('click', (e) => {
+    dialogEl.showModal();
+});
+
+document.querySelector("form").addEventListener(
+    'submit', (e) => {
+        e.preventDefault();
+        const data = new FormData(e.target);
+        addToBookLibrary(
+            data.get("book_title"),
+            data.get("author_name"),
+            data.get("count_pages"),
+            data.get("read_check")
+        );
+        
+        console.log(data.get("read_check"));
+        dialogEl.close();
+    }
+)
 
 function Book (title, author, pages, read) {
     this.title = title;
@@ -15,9 +30,6 @@ function Book (title, author, pages, read) {
     this.read = read;
 
     this.createDomElement = function () {
-
-        console.log("blah");
-
         const main = document.createElement("div");
         const title = document.createElement("div");
         const author = document.createElement("div");

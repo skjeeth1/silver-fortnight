@@ -5,13 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LibraryUI</title>
 
+    <link rel="stylesheet" href="styles.css">
+
     
 </head>
 <body>
+    <header>
+        <div class="head">LibraryUI</div>
+    </header>
     <main>
         <div class="container">
-            <button id="addElement">Add Element</button>
+            <button id="add-element">Add Element</button>
         </div>
+        <dialog>
+            <p>Enter Book Details</p>
+            <form class="book-data" method="post">
+                <p>
+                    <label for="title">Book Title:</label>
+                    <input type="text" id="title" name="book_title">
+                </p>
+                <p>
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author_name">
+                </p>
+                <p>
+                    <label for="pages">Pages:</label>
+                    <input type="number" id="pages" name="count_pages" min="1" max="10000">
+                </p>
+                <p>
+                    <label for="read">Have you read the book:</label>
+                    <input type="checkbox" id="read" name="read_check">
+                </p>
+                <p class="button">
+                    <button id="submit-form" type="submit">Add book to library</button>
+                </p>
+            </form>
+        </dialog>
     </main>
     <script src="main.js"></script>
 </body>
