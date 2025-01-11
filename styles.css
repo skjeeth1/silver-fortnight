@@ -1,0 +1,55 @@
+* {
+    font-family: sans-serif;
+}
+
+header {
+    font-size: 50px;
+    font-weight: 900;
+    padding: 30px 0px 50px 0px;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+main {
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+    background-color: white;
+}
+
+button, #header{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#add-element {
+    border: none;
+    font-size: 30px;
+    outline: none;
+    background-color: inherit;
+    font-weight: 900;
+}
+
+dialog{
+    font-size: 18px;
+    text-align: left;
+}
+
+.container{
+    margin: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.card{
+    font-size: 24px;
+    border-style: solid;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+}
+
